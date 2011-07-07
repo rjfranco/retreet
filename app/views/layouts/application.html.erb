@@ -11,7 +11,7 @@
 </head>
 <body>
 <header>
-    <%= image_tag('retreet-logo.png', :alt => 'Sample App') %>
+    <h1><%= link_to "Retreet", '#' %></h1>
     <nav>
         <ul>
             <li><%= link_to "Home", '#' %></li>
@@ -20,7 +20,7 @@
         </ul>
     </nav>
 </header>
-<section class="cont ent">
+<section class="content">
 <%= yield %>
 </section>
 </body>
