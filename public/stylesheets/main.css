@@ -131,3 +131,23 @@ a.signup-btn {
   display: inline-block; }
   a.signup-btn:hover {
     background: #990000; }
+
+/* Footer Content */
+footer {
+  margin: 1em auto;
+  background: #fff;
+  width: 700px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0 5px 3px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 0 5px 3px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 0 5px 3px;
+  overflow: hidden; }
+  footer ul {
+    display: block;
+    margin: .75em 1em .65em;
+    overflow: hidden; }
+    footer ul li {
+      float: left;
+      margin: 0 1em 0 0; }

@@ -107,3 +107,26 @@ a.signup-btn {
 		background: #990000;
 	};
 }
+
+
+
+
+/* Footer Content */
+
+footer {
+	margin: 1em auto;
+	background: #fff;
+	width: 700px;
+	@include rounded;
+	@include shadow;
+	overflow: hidden;
+	ul {
+		display: block;
+		margin: .75em 1em .65em;
+		overflow: hidden;
+		li {
+			float: left;
+			margin: 0 1em 0 0;
+		}
+	}
+}
