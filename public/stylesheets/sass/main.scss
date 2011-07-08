@@ -130,3 +130,13 @@ footer {
 		}
 	}
 }
+
+/* Debug Content */
+pre.debug_dump {
+	width: 670px;
+	margin: 1em auto;
+	background: #fff;
+	@include shadow;
+	@include rounded;
+	padding: .5em 1em;
+}
