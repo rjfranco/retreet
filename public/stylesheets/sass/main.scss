@@ -140,3 +140,25 @@ pre.debug_dump {
 	@include rounded;
 	padding: .5em 1em;
 }
+
+
+/* User Show Page Styles */
+
+section.posts {
+	float: left;
+	border-right: 1px solid rgba(0,0,0,.15);
+	width: 440px;
+	h1 {
+		img {
+			float: left;
+		}
+	}
+}
+
+section.profile {
+	float: left;
+	ul {
+		margin: 1em;
+		line-height: 1.4;
+	}
+}

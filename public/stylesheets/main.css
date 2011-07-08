@@ -164,3 +164,17 @@ pre.debug_dump {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   padding: .5em 1em; }
+
+/* User Show Page Styles */
+section.posts {
+  float: left;
+  border-right: 1px solid rgba(0, 0, 0, 0.15);
+  width: 440px; }
+  section.posts h1 img {
+    float: left; }
+
+section.profile {
+  float: left; }
+  section.profile ul {
+    margin: 1em;
+    line-height: 1.4; }
