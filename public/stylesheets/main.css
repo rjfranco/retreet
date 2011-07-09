@@ -170,8 +170,11 @@ section.posts {
   float: left;
   border-right: 1px solid rgba(0, 0, 0, 0.15);
   width: 440px; }
-  section.posts h1 img {
-    float: left; }
+  section.posts h1 {
+    line-height: 1.6;
+    text-indent: .5em; }
+    section.posts h1 img {
+      float: left; }
 
 section.profile {
   float: left; }
