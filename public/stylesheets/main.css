@@ -183,21 +183,21 @@ section.profile {
     margin: 1em;
     line-height: 1.4; }
 
-/* Sign Up Page Styles */
-ul.signup {
+/* Sign Up and Sign In Page Styles */
+ul.signup, ul.signin {
   margin: 1em 1em 2em; }
-  ul.signup li {
+  ul.signup li, ul.signin li {
     margin: 1em 0; }
-  ul.signup label {
+  ul.signup label, ul.signin label {
     display: block;
     line-height: 1.3;
     text-indent: .4em; }
-  ul.signup input[type=text], ul.signup input[type=password] {
+  ul.signup input[type=text], ul.signup input[type=password], ul.signin input[type=text], ul.signin input[type=password] {
     border: 1px solid #bbb;
     font-size: 1.1em;
     padding: .2em;
     color: #666; }
-  ul.signup input[type=submit] {
+  ul.signup input[type=submit], ul.signin input[type=submit] {
     font-size: 2em;
     color: #fff;
     background: #000;
@@ -208,9 +208,9 @@ ul.signup {
     display: inline-block;
     border: 0;
     cursor: pointer; }
-    ul.signup input[type=submit]:hover {
+    ul.signup input[type=submit]:hover, ul.signin input[type=submit]:hover {
       background: #990000; }
-  ul.signup .field_with_errors input[type=text], ul.signup .field_with_errors input[type=password] {
+  ul.signup .field_with_errors input[type=text], ul.signup .field_with_errors input[type=password], ul.signin .field_with_errors input[type=text], ul.signin .field_with_errors input[type=password] {
     border: 1px solid #990000; }
 
 /* Flash message styles */

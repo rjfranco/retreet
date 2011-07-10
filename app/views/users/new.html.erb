@@ -1,12 +1,12 @@
 <h1>Sign up</h1>
 
 <%= form_for(@user) do |f| %>
-    <%= render 'layouts/error_messages' %>
-    <ul class="signup">
-        <li><%= f.label :name %><%= f.text_field :name %></li>
-        <li><%= f.label :email %><%= f.text_field :email %></li>
-        <li><%= f.label :password %><%= f.password_field :password %></li>
-        <li><%= f.label :password_confirmation, "Confirm Password" %><%= f.password_field :password_confirmation %></li>
-        <li><%= f.submit "Sign up" %>
-    </ul>
+  <%= render 'layouts/error_messages' %>
+  <ul class="signup">
+    <li><%= f.label :name %><%= f.text_field :name %></li>
+    <li><%= f.label :email %><%= f.text_field :email %></li>
+    <li><%= f.label :password %><%= f.password_field :password %></li>
+    <li><%= f.label :password_confirmation, "Confirm Password" %><%= f.password_field :password_confirmation %></li>
+    <li><%= f.submit "Sign up" %></li>
+  </ul>
 <% end %>
