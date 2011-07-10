@@ -21,6 +21,9 @@
     </nav>
 </header>
 <section class="content">
+<% flash.each do |key, value| %>
+  <h5 class="flash <%= key %>"><%= value %></h5>
+<% end %>
 <%= yield %>
 </section>
 <footer>

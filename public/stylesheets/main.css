@@ -169,9 +169,13 @@ pre.debug_dump {
 section.posts {
   float: left;
   border-right: 1px solid rgba(0, 0, 0, 0.15);
-  width: 440px; }
-  section.posts h1 img {
-    float: left; }
+  width: 440px;
+  min-height: 15em; }
+  section.posts h1 {
+    line-height: 1.5;
+    text-indent: .4em; }
+    section.posts h1 img {
+      float: left; }
 
 section.profile {
   float: left; }
@@ -206,3 +210,38 @@ ul.signup {
     cursor: pointer; }
     ul.signup input[type=submit]:hover {
       background: #990000; }
+  ul.signup .field_with_errors input[type=text], ul.signup .field_with_errors input[type=password] {
+    border: 1px solid #990000; }
+
+/* Flash message styles */
+h5.flash {
+  background: #000;
+  color: #fff;
+  padding: .5em 1em;
+  font-size: 1em;
+  line-height: 1.6;
+  overflow: hidden; }
+  h5.flash.success {
+    font-size: 1.8em; }
+
+/* Error message styles */
+div.error_explanation {
+  border: 1px solid #333;
+  margin: 1em;
+  background: #fffceb; }
+  div.error_explanation h5 {
+    color: #990000;
+    font-size: 1em;
+    margin: 1em 1em 0;
+    font-weight: bold; }
+    div.error_explanation h5 + p {
+      margin: .2em 1em .3em;
+      color: #333;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: .3em; }
+  div.error_explanation ul {
+    list-style: disc;
+    margin: .3em 1em 1em 2em;
+    line-height: 1.3; }
+    div.error_explanation ul li {
+      color: #666; }
