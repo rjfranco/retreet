@@ -4,6 +4,12 @@ class SessionsController < ApplicationController
   end
 
   def create
+    user = User.authenticate(params[:session][:email], params[:session][:password])
+    if user.nil?
+      # render 'new'
+    else
+      # Handle success
+    end
   end
   
   def destory
