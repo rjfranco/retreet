@@ -213,6 +213,19 @@ ul.signup, ul.signin {
   ul.signup .field_with_errors input[type=text], ul.signup .field_with_errors input[type=password], ul.signin .field_with_errors input[type=text], ul.signin .field_with_errors input[type=password] {
     border: 1px solid #990000; }
 
+/* Edit page styles */
+a.gravatar {
+  display: inline-block;
+  margin: 0 .9em;
+  font-size: 1.3em;
+  line-height: 2.4;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px; }
+  a.gravatar img {
+    float: left;
+    margin-right: .5em; }
+
 /* Flash message styles */
 h5.flash {
   background: #000;
