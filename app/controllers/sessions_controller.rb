@@ -15,6 +15,9 @@ class SessionsController < ApplicationController
     end
   end
   
-  def destory
+  def destroy
+    sign_out
+    flash.now[:notice] = "You have been logged out."
+    redirect_to root_path
   end
 end
