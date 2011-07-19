@@ -161,8 +161,25 @@ section.posts {
 section.profile {
 	float: left;
 	ul {
-		margin: 1em;
+		margin: 1em 1em 2em;
 		line-height: 1.4;
+	}
+}
+
+/* User Index Styles */
+ul.users {
+	margin: 1em;
+	li {
+		overflow: hidden;
+		img {
+			float: left;
+			margin: 0 .5em 0 0;
+			@include rounded(5px);
+		}
+		h3 {
+			font-size: 1.5em;
+			margin: .2em 0 0;
+		}
 	}
 }
 
