@@ -1,9 +1,7 @@
 <h1>All users</h1>
+
+<%= will_paginate %>
 <ul class="users">
-  <% @users.each do |user| %>
-  <li>
-    <%= link_to(user) do %><%= gravatar_for user %><% end %>
-    <h3><%= link_to(user.name, user) %></h3>
-    <h4><%= mail_to(user.email) %></h4>
-  </li>
-  <% end %>
+  <%= render @users %>
+</ul>
+<%= will_paginate %>
