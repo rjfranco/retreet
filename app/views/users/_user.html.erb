@@ -2,4 +2,7 @@
   <%= link_to(user) do %><%= gravatar_for user %><% end %>
   <h3><%= link_to(user.name, user) %></h3>
   <h4><%= mail_to(user.email) %></h4>
+  <% if current_user.admin? %>
+  <%= link_to "delete", user, :method => :delete, :confirm => "Are you sure you want to delete this user?", :title => "Delete #{user.name}"%>
+  <% end %>
 </li>
