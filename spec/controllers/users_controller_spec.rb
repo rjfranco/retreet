@@ -283,7 +283,7 @@ describe UsersController do
     
     describe "as an admin user" do
       before(:each) do
-        admin = Factory(:user, :email => "admin@example.com", :admin => true)
+        @admin = Factory(:user, :email => "admin@example.com", :admin => true)
         test_sign_in(admin)
       end
       
@@ -297,6 +297,12 @@ describe UsersController do
         delete :destroy, :id => @user
         flash[:success].should =~ /removed/i
         response.should redirect_to(users_path)
+      end
+      
+      it "should not be able to destroy itself" do
+        lamda do
+          delete :destroy, :id = @admin
+        end.should_not change(User, :count)
       end
     end
   end
