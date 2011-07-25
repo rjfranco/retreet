@@ -1,9 +1,16 @@
 <section class="posts">
   <h1><%= gravatar_for @user %><%= @user.name %></h1>
+  <% if @user.microposts.any? %>
+  <ul class="microposts">
+    <%= render @microposts %>
+  </ul>
+  <%= will_paginate @microposts %>
+  <% end %>
 </section>
 <section class="profile">
   <ul>
-    <li>Name: <strong><%= @user.name %></strong></li>
+    <li class="name">Name: <strong><%= @user.name %></strong></li>
     <li class="link">URL: <strong><%= link_to user_path(@user), user_path(@user) %></strong></li>
+    <li class="count">Microposts: <%= @user.microposts.count %></li>
   </ul>
 </section>

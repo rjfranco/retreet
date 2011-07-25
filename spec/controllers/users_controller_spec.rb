@@ -41,7 +41,7 @@ describe UsersController do
       
       it "should paginate users" do
         get :index
-        response.should have_selector('div.pagination')
+        response.should have_selector('.pagination')
         response.should have_selector('.previous_page.disabled', :content => 'Previous')
         response.should have_selector('a', :href=> '/users?page=2', :content => '2')
         response.should have_selector('.next_page', :content => 'Next')
@@ -95,6 +95,26 @@ describe UsersController do
     it "should have the right URL" do
       get :show, :id => @user
       response.should have_selector('li.link a', :content => user_path(@user), :href => user_path(@user))
+    end
+    
+    it "should show the user's microposts" do
+      mp1 = Factory(:micropost, :user => @user, :content => 'Foo bar')
+      mp2 = Factory(:micropost, :user => @user, :content => 'Baz quux')
+      get :show, :id => @user
+      response.should have_selector('p.content', :content => mp1.content)
+      response.should have_selector('p.content', :content => mp2.content)
+    end
+    
+    it "should paginate microposts" do
+      50.times { Factory(:micropost, :user => @user, :content => 'foo') }
+      get :show, :id => @user
+      response.should have_selector('.pagination')
+    end
+    
+    it "should show the total micro-posts count" do
+      10.times { Factory(:micropost, :user => @user, :content => 'foo') }
+      get :show, :id => @user
+      response.should have_selector('.count', :content => @user.microposts.count.to_s)
     end
   end
   
