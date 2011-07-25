@@ -6,7 +6,10 @@ I've made the repo public because honostly, there's nothing new here - in fact p
 
 ## Quick Notes
 
-- Still very, very basic, and incomplete. I'll should have it finished before too long though (working on user auth pretty soon here)
+- Still very, very basic, and "unpolished"
+- User Model is now working
+- Micropost Model is partially complete
+- Styles are very incomplete
 - Not designed for use on an external network, I have no idea what kinds of security issues may be lurking in here.
 
 ## Yours - [Ramiro Jr. Franco](mailto:rjfranco@gmail.com)
