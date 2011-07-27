@@ -156,6 +156,21 @@ section.posts {
 			float: left;
 		}
 	}
+	ul.microposts {
+		& > li {
+			margin: 1em;
+			p {
+				margin: .2em 0;
+				&.content {
+					color: #666;
+				}
+				&.timestamp {
+					color: #999;
+					font-size: .8em;
+				}
+			}
+		}
+	}
 }
 
 section.profile {

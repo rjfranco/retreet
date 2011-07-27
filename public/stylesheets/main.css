@@ -176,6 +176,15 @@ section.posts {
     text-indent: .4em; }
     section.posts h1 img {
       float: left; }
+  section.posts ul.microposts > li {
+    margin: 1em; }
+    section.posts ul.microposts > li p {
+      margin: .2em 0; }
+      section.posts ul.microposts > li p.content {
+        color: #666; }
+      section.posts ul.microposts > li p.timestamp {
+        color: #999;
+        font-size: .8em; }
 
 section.profile {
   float: left; }
