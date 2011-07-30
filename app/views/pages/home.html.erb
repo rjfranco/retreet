@@ -1,1 +1,8 @@
+<% if signed_in? %>
+
+<h1 class="micropost">What's Up?</h1>
+<% render 'layouts/micrpost_form'%>
+
+<% else %>
 <%= link_to "Sign up.", signup_path, :class => "signup-btn" %>
+<% end %>
