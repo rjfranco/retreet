@@ -1,4 +1,5 @@
 <% form_for(@micropost) do |f| %>
+  <%= render 'layouts/error_messages', :object => f.object %>
   <%= f.text_area :content %>
   <%= f.submit "Submit" %>
 <% end %>

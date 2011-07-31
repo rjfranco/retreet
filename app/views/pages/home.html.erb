@@ -1,7 +1,11 @@
 <% if signed_in? %>
 
-<h1 class="micropost">What's Up?</h1>
-<% render 'layouts/micrpost_form'%>
+<section class="posts">
+<h1 class="micropost">What's going on?</h1>
+<%= render 'layouts/micropost_form' %>
+</section>
+
+<%= render 'layouts/user_info' %>
 
 <% else %>
 <%= link_to "Sign up.", signup_path, :class => "signup-btn" %>
