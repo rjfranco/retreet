@@ -210,9 +210,16 @@ section.posts {
     section.posts h1.with_avatar {
       text-indent: .4em; }
   section.posts ul.microposts > li {
-    margin: 1em; }
+    margin: 1em;
+    overflow: hidden; }
+    section.posts ul.microposts > li img {
+      float: left;
+      margin: 0 .5em .4em 0; }
     section.posts ul.microposts > li p {
       margin: .2em 0; }
+      section.posts ul.microposts > li p.user {
+        font-size: .9em;
+        font-weight: bold; }
       section.posts ul.microposts > li p.content {
         color: #666; }
       section.posts ul.microposts > li p.timestamp {

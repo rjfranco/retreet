@@ -1,5 +1,5 @@
 <section class="profile">
-  <%= gravatar_for current_user, :size => 75 %>
+  <%= link_to gravatar_for(current_user, :size => 75), current_user %>
   <ul>
     <li class="name">Name: <strong><%= current_user.name %></strong></li>
     <li class="link">URL: <strong><%= link_to user_path(current_user), user_path(current_user) %></strong></li>
