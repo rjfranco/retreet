@@ -207,6 +207,20 @@ describe User do
       end
     end
   end
+  
+  describe "relationships" do
+    before(:each) do
+      @user = User.create!(@attr)
+    end
+    
+    it "should have a relationships method" do
+      @user.should respond_to(:relationships)
+    end
+    
+    it "should have a following method" do
+      @user.should respond_to(:following)
+    end
+  end
 end
 
 

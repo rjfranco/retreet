@@ -3,6 +3,8 @@ class User < ActiveRecord::Base
   attr_accessible :name, :email, :password, :password_confirmation
   
   has_many :microposts, :dependent => :destroy
+  has_many :relationships, :dependent => :destroy, :foreign_key => "follower_id"
+  has_many :following, :through => :relationships, :source => :followed
   
   validates :name, :presence => true, :length => { :maximum => 50 }
   validates :email, :presence => true, :email => true, :uniqueness => { :case_sensitive => false }
