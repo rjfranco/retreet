@@ -5,7 +5,7 @@
     <li class="link">URL: <strong><%= link_to user_path(current_user), user_path(current_user) %></strong></li>
     <li class="count"><%= pluralize(current_user.microposts.count, "post") %></li>
     <% @user ||= current_user %>
-    <li class="following"><a href="<%= following_user_path(@user) %>">Following <%= @user.following.count %> <%= pluralize(@user.following.count, "user") %></a></li>
-    <li class="followers"><a href="<%= followers_user_path(@user) %>"><%= @user.followers.count %> <%= pluralize(@user.followers.count, "follower") %></a></li>
+    <li class="following"><a href="<%= following_user_path(@user) %>">Following <%= pluralize(@user.following.count, "user") %></a></li>
+    <li class="followers"><a href="<%= followers_user_path(@user) %>">Followed by <%= pluralize(@user.followers.count, "user") %></a></li>
   </ul>
 </section>

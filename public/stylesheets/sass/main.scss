@@ -185,6 +185,20 @@ section.posts {
 	border-right: 1px solid rgba(0,0,0,.15);
 	width: 440px;
 	min-height: 15em;
+	input#relationship_submit {
+		margin: 0 .85em;
+		font-size: 1.2em;
+		color: #fff;
+		background: #000;
+		padding: .2em .35em;
+		@include rounded;
+		display: inline-block;
+		border: 0;
+		cursor: pointer;
+		&:hover {
+			background: #990000;
+		};
+	}
 	h1 {
 		line-height: 1.5;
 		margin: .5em;

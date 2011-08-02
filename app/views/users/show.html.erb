@@ -1,5 +1,6 @@
 <section class="posts">
   <h1 class="with_avatar"><%= gravatar_for @user %><%= @user.name %></h1>
+  <%= render 'follow_form' if signed_in? %>
   <% if @user.microposts.any? %>
   <ul class="microposts">
     <%= render @microposts %>
@@ -12,5 +13,7 @@
     <li class="name">Name: <strong><%= @user.name %></strong></li>
     <li class="link">URL: <strong><%= link_to user_path(@user), user_path(@user) %></strong></li>
     <li class="count"><%= pluralize(@user.microposts.count, "post") %></li>
+    <li class="following"><a href="<%= following_user_path(@user) %>">Following <%= pluralize(@user.following.count, "user") %></a></li>
+    <li class="followers"><a href="<%= followers_user_path(@user) %>">Followed by <%= pluralize(@user.followers.count, "user") %></a></li>
   </ul>
 </section>

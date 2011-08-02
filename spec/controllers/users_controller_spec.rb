@@ -116,6 +116,14 @@ describe UsersController do
       get :show, :id => @user
       response.should have_selector('.count', :content => @user.microposts.count.to_s)
     end
+    
+    describe "when signed in as another user" do
+      it "should be succesful" do
+        test_sign_in(Factory(:user, :email => Factory.next(:email)))
+        get :show, :id => @user
+        response.should be_success
+      end
+    end
   end
   
   describe "GET 'new'" do

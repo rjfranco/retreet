@@ -202,6 +202,20 @@ section.posts {
   border-right: 1px solid rgba(0, 0, 0, 0.15);
   width: 440px;
   min-height: 15em; }
+  section.posts input#relationship_submit {
+    margin: 0 .85em;
+    font-size: 1.2em;
+    color: #fff;
+    background: #000;
+    padding: .2em .35em;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    display: inline-block;
+    border: 0;
+    cursor: pointer; }
+    section.posts input#relationship_submit:hover {
+      background: #990000; }
   section.posts h1 {
     line-height: 1.5;
     margin: .5em; }
