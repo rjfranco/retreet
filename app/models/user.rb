@@ -4,7 +4,9 @@ class User < ActiveRecord::Base
   
   has_many :microposts, :dependent => :destroy
   has_many :relationships, :dependent => :destroy, :foreign_key => "follower_id"
+  has_many :reverse_relationships, :dependent => :destroy, :foreign_key => "followed_id", :class_name => "Relationship"
   has_many :following, :through => :relationships, :source => :followed
+  has_many :followers, :through => :reverse_relationships, :source => :follower
   
   validates :name, :presence => true, :length => { :maximum => 50 }
   validates :email, :presence => true, :email => true, :uniqueness => { :case_sensitive => false }
@@ -20,18 +22,28 @@ class User < ActiveRecord::Base
     Micropost.where("user_id = ?", id)
   end
   
-  class << self
-    def authenticate(email, submitted_password)
-      user = find_by_email(email)
-      (user && user.has_password?(submitted_password)) ? user : nil
-    end
-    
-    def authenticate_with_salt(id, cookie_salt)
-      user = find_by_id(id)
-      (user && user.salt == cookie_salt) ? user : nil
-    end
+  def following?(followed)
+    relationships.find_by_followed_id(followed)
   end
   
+  def follow!(followed)
+    relationships.create!(:followed_id => followed.id)
+  end
+  
+  def unfollow!(followed)
+    relationships.find_by_followed_id(followed).destroy
+  end
+  
+  def self.authenticate(email, submitted_password)
+    user = find_by_email(email)
+    (user && user.has_password?(submitted_password)) ? user : nil
+  end
+  
+  def self.authenticate_with_salt(id, cookie_salt)
+    user = find_by_id(id)
+    (user && user.salt == cookie_salt) ? user : nil
+  end
+
   private
     def encrypt_password
       self.salt = make_salt if new_record?
