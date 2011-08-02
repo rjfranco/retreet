@@ -264,6 +264,43 @@ ul.users {
 	}
 }
 
+/* Followers Styles */
+
+section.follow {
+	float: left;
+	width: 440px;
+	border-right: 1px solid rgba(0,0,0,.15);
+	min-height: 15em;
+	h1 {
+		line-height: 1.5;
+		margin: .5em;
+	}
+	ul.follow {
+		& > li {
+			margin: 1em;
+			overflow: hidden;
+			img {
+				float: left;
+				margin: 0 .5em .4em 0;
+			}
+			p {
+				margin: .2em 0;
+				&.user {
+					font-size: .9em;
+					font-weight: bold;
+				}
+				&.content {
+					color: #666;
+				}
+				&.timestamp {
+					color: #999;
+					font-size: .8em;
+				}
+			}
+		}
+	}
+}
+
 /* Sign Up and Sign In Page Styles */
 
 ul.signup, ul.signin {
