@@ -1,0 +1,3 @@
+$('form.edit_relationship').remove();
+$('section.posts h1').after("<%= escape_javascript(render 'users/follow') %>")
+$('li.followers a').html("Followed by <%= pluralize(@user.followers.count, 'user') %>");
