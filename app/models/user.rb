@@ -13,13 +13,13 @@ class User < ActiveRecord::Base
   validates :password, :presence => true, :confirmation => true, :length => { :within => 6..40 }
   
   before_save :encrypt_password
-  
+
   def has_password?(submitted_password)
     encrypted_password == encrypt(submitted_password)
   end
   
   def feed
-    Micropost.where("user_id = ?", id)
+    Micropost.from_users_followed_by(self)
   end
   
   def following?(followed)
